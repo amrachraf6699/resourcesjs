@@ -13,6 +13,14 @@
   ],
   "license": "MIT",
   "author": "Amr Achraf",
+  "homepage": "https://github.com/amrachraf6699/resourcesjs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amrachraf6699/resourcesjs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/amrachraf6699/resourcesjs/issues"
+  },
   "type": "module",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
