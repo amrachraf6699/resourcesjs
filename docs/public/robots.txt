@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://resourcesjs.amrachraf.cloud/sitemap-index.xml

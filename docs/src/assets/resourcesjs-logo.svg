@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" role="img" aria-label="ResourcesJS logo">
+  <defs>
+    <linearGradient id="resourcesjs-mark" x1="28" x2="164" y1="164" y2="28" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2563eb" />
+      <stop offset="0.52" stop-color="#7c3aed" />
+      <stop offset="1" stop-color="#06b6d4" />
+    </linearGradient>
+  </defs>
+  <rect width="192" height="192" rx="44" fill="#0f172a" />
+  <path d="M52 132V60h45c22 0 36 13 36 33 0 13-6 23-17 29l24 10v16l-42-18H72v18H52Zm20-34h25c10 0 16-5 16-14s-6-14-16-14H72v28Z" fill="url(#resourcesjs-mark)" />
+  <path d="M50 148h92" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round" />
+</svg>

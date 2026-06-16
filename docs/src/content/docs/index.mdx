@@ -1,0 +1,77 @@
+---
+title: ResourcesJS
+description: Laravel-inspired API Resources for Node.js and TypeScript.
+template: splash
+hero:
+  tagline: Transform, validate, document, and standardize API responses with reusable Resource classes.
+  actions:
+    - text: Get started
+      link: /getting-started/
+      icon: right-arrow
+      variant: primary
+    - text: API reference
+      link: /api-reference/
+      icon: document
+    - text: GitHub
+      link: https://github.com/amrachraf6699/resourcesjs
+      icon: external
+---
+
+import { Card, CardGrid } from "@astrojs/starlight/components";
+
+ResourcesJS brings the Laravel API Resource experience to Node.js while staying
+framework-agnostic and TypeScript-first.
+
+Instead of shaping API responses inside controllers, create reusable Resource
+classes that own output formatting, nested serialization, runtime validation,
+metadata, and OpenAPI schema generation.
+
+<CardGrid>
+  <Card title="Laravel-like developer experience">
+    Use `UserResource.make(user)` and `UserResource.collection(users)` for clean,
+    familiar response shaping.
+  </Card>
+  <Card title="Framework agnostic">
+    Return plain serializable objects from Express, Fastify, Hono, NestJS,
+    Elysia, AdonisJS, or any other HTTP framework.
+  </Card>
+  <Card title="TypeScript-first">
+    Infer output types with `InferResource`, including schema outputs and
+    conditional optional fields.
+  </Card>
+  <Card title="Validation and documentation">
+    Use static Zod schemas for runtime validation and OpenAPI schema generation.
+  </Card>
+</CardGrid>
+
+## Package
+
+```bash wrap
+npm install @amrachraf6690/resourcesjs zod
+```
+
+```ts wrap
+import { Resource } from "@amrachraf6690/resourcesjs";
+
+class UserResource extends Resource<User> {
+  toArray() {
+    return {
+      id: this.resource.id,
+      name: this.resource.name,
+      email: this.resource.email,
+    };
+  }
+}
+
+return UserResource.make(user);
+```
+
+```json wrap
+{
+  "data": {
+    "id": 1,
+    "name": "John",
+    "email": "john@example.com"
+  }
+}
+```
