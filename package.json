@@ -1,0 +1,70 @@
+{
+  "name": "@amrachraf6690/resourcesjs",
+  "version": "0.1.0",
+  "description": "Laravel-inspired API resources for Node.js and TypeScript",
+  "keywords": [
+    "api",
+    "resource",
+    "serializer",
+    "typescript",
+    "laravel",
+    "openapi",
+    "zod"
+  ],
+  "license": "MIT",
+  "author": "Amr Achraf",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=18.18.0"
+  },
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "test:smoke": "npm run build && node tests/smoke/esm.mjs && node tests/smoke/cjs.cjs",
+    "check": "npm run typecheck && npm run test:coverage && npm run test:smoke && npm pack --dry-run"
+  },
+  "dependencies": {
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@adonisjs/core": "6.2.3",
+    "@elysiajs/node": "^1.4.5",
+    "@nestjs/common": "^10.4.22",
+    "@types/node": "^24.10.1",
+    "@types/express": "^5.0.6",
+    "@vitest/coverage-v8": "^3.2.4",
+    "elysia": "^1.4.28",
+    "express": "^5.2.1",
+    "fastify": "^4.29.1",
+    "hono": "^4.12.25",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.2",
+    "tsup": "^8.5.1",
+    "typescript": "^6.0.3",
+    "vite": "^6.4.3",
+    "vitest": "^3.2.4"
+  }
+}
