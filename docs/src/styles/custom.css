@@ -28,6 +28,51 @@
   --sl-color-black: #020617;
 }
 
+:root[data-theme="light"] {
+  --sl-color-accent-low: #dbeafe;
+  --sl-color-accent: #2563eb;
+  --sl-color-accent-high: #1d4ed8;
+  --sl-color-white: #0f172a;
+  --sl-color-gray-1: #0f172a;
+  --sl-color-gray-2: #334155;
+  --sl-color-gray-3: #475569;
+  --sl-color-gray-4: #64748b;
+  --sl-color-gray-5: #cbd5e1;
+  --sl-color-gray-6: #e2e8f0;
+  --sl-color-gray-7: #f8fafc;
+  --sl-color-black: #ffffff;
+  --sl-color-text: #334155;
+  --sl-color-text-accent: #2563eb;
+  --sl-color-text-invert: #ffffff;
+  --sl-color-bg: #f8fafc;
+  --sl-color-bg-nav: #ffffff;
+  --sl-color-bg-sidebar: #f8fafc;
+  --sl-color-bg-inline-code: #eff6ff;
+  --sl-color-bg-accent: #2563eb;
+  --sl-color-hairline-light: #f1f5f9;
+  --sl-color-hairline: #e2e8f0;
+  --sl-color-hairline-shade: #dbeafe;
+  --sl-color-backdrop-overlay: rgb(15 23 42 / 42%);
+  --sl-color-orange-low: #fff7ed;
+  --sl-color-orange: #ea580c;
+  --sl-color-orange-high: #9a3412;
+  --sl-color-green-low: #ecfdf5;
+  --sl-color-green: #059669;
+  --sl-color-green-high: #065f46;
+  --sl-color-blue-low: #dbeafe;
+  --sl-color-blue: #2563eb;
+  --sl-color-blue-high: #1d4ed8;
+  --sl-color-purple-low: #eef2ff;
+  --sl-color-purple: #4f46e5;
+  --sl-color-purple-high: #3730a3;
+  --sl-color-red-low: #fef2f2;
+  --sl-color-red: #dc2626;
+  --sl-color-red-high: #991b1b;
+  --sl-shadow-sm: 0 1px 2px rgb(15 23 42 / 6%);
+  --sl-shadow-md: 0 10px 30px rgb(15 23 42 / 8%);
+  --sl-shadow-lg: 0 24px 70px rgb(15 23 42 / 14%);
+}
+
 .hero {
   gap: clamp(2rem, 6vw, 6rem);
 }
@@ -48,6 +93,38 @@
 .sl-markdown-content .card {
   border-color: color-mix(in srgb, var(--sl-color-accent) 24%, transparent);
   min-width: 0;
+}
+
+:root[data-theme="light"] .sl-markdown-content .card {
+  background-color: #ffffff;
+  border-color: #dbeafe;
+  box-shadow: var(--sl-shadow-sm);
+}
+
+:root[data-theme="light"] .sl-markdown-content .card:hover {
+  border-color: #bfdbfe;
+}
+
+:root[data-theme="light"] .sl-link-button.primary {
+  background: #2563eb;
+  border-color: #2563eb;
+  color: #ffffff;
+}
+
+:root[data-theme="light"] .sl-link-button.primary:hover {
+  background: #1d4ed8;
+  border-color: #1d4ed8;
+  color: #ffffff;
+}
+
+:root[data-theme="light"] .sl-link-button.secondary {
+  border-color: #bfdbfe;
+  color: #1e3a8a;
+}
+
+:root[data-theme="light"] .sl-markdown-content code:not(:where(pre *)) {
+  border-color: #bfdbfe;
+  color: #1e3a8a;
 }
 
 .sl-markdown-content .card-grid {
